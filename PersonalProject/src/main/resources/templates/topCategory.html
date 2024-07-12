@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css}" rel="stylesheet" />
+<link th:href="@{styles/style.css}" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+	<nav>
+		<img th:src="@{images/white_logo.png}" class='logo'><span class='logoName'>CuddleCoin</span>
+	</nav>
+	<div class="navbar">
+		<ul>
+        	<li><a href="/transaction">Home</a></li>
+        	<li><a href="/topCategories">Top 5 Categories</a></li>
+    	</ul>
+    </div>
+</header>
+<div class='container' >
+ <h1>Top 5 Categories</h1>
+ <ul class='top'>
+ 	<li th:each="category : ${categories}">
+		<span th:class="'icon ' + ${#strings.equals(category, 'Groceries') ? 'fas fa-apple-alt' : ''}"
+                th:if="${#strings.equals(category, 'Groceries')}"></span>
+ 		<span th:class="'icon ' + ${#strings.equals(category, 'Shopping') ? 'fas fa-shopping-cart' : ''}"
+                th:if="${#strings.equals(category, 'Shopping')}"></span>
+ 		<span th:class="'icon ' + ${#strings.equals(category, 'Entertainment') ? 'fas fa-film' : ''}"
+                th:if="${#strings.equals(category, 'Entertainment')}"></span>
+ 		<span th:class="'icon ' + ${#strings.equals(category, 'Rent') ? 'fas fa-home' : ''}"
+                th:if="${#strings.equals(category, 'Rent')}"></span>
+ 		<span th:class="'icon ' + ${#strings.equals(category, 'Takeout') ? 'fas fa-hamburger' : ''}"
+                th:if="${#strings.equals(category, 'Takeout')}"></span>
+ 		<span th:text="${category}"></span>
+ 	</li>
+ </ul>
+ <a href="/transaction"><button>Back</button></a>
+ </div>
+</body>
+</html>

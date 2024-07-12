@@ -1,0 +1,168 @@
+@charset "UTF-8";
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Lexend", sans-serif;
+	outline:none; border:none;
+}
+html{
+
+	scroll-behavior: smooth;
+	scroll-padding-top: 6rem;
+	overflow-x: hidden;
+	font-weight:200;
+}
+header{
+	position: fixed;
+	height:100px;
+	top:0; left:0; right:0;
+	background: black;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index:1000;
+	
+}
+nav{
+	display:flex;
+	align-items:center;
+}
+.logo{
+	width: auto;
+	height: 80px;
+
+}
+.logoName{
+	font-size: 2.0rem;
+	color: white;
+	font-weight: 200;
+	
+}
+.navbar ul{
+	display:flex;
+	justify-content: space-between;
+
+}
+header .navbar a{
+	font-size: 1rem;
+	padding:0 1.5rem;
+	color: white;
+}
+header .navbar a:hover{
+	color: var(#E0E0E0);
+}
+
+.container{
+	margin-top:100px;
+	padding: 2rem 9%;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.form{
+	border: 2px solid;
+	padding: 2rem;
+	padding-right: 20%;
+	padding-left: 20%;
+}
+.intro{
+	background:url(../images/background.png) no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top:70px;
+}
+p{
+	margin:30px;
+	
+}
+h1, h2{
+	font-weight: 300;
+	margin:20px;
+}
+.subtitle{
+	color: #657363;
+}
+.cats{
+	height:400px;
+}
+button{
+	background-color: black;
+	color: white;
+	padding: 15px 32px;
+	font-size: 1.0rem;
+	font-weight: 200;
+	border-radius: 4px;
+	margin:30px;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+	font-size: 1rem;
+}
+th, td {
+	border: 1px solid black;
+	padding: 12px;
+	text-align: left;
+}
+th {
+	background-color: black;
+	color: white;
+	font-weight: 300;
+}
+tbody tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+tbody tr:nth-child(odd) {
+	background-color: white;
+}
+table a {
+	color: black;
+	text-decoration: none;
+}
+table a:hover {
+	text-decoration: underline;
+}
+
+input[type="text"], [type=date], select {
+	background-color: #E0E0E0;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 4px;
+	width: 100%;
+	font-weight: 300;
+}
+input[type="submit"] {
+	background-color: black;
+	color: white;
+	padding: 15px 32px;
+	font-size: 1.0rem;
+	font-weight: 200;
+	border-radius: 4px;
+	cursor: pointer;
+	display: block;
+	margin: 20px auto;
+}
+.top ul {
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+}
+
+.top li {
+    border: 1.5px solid black;
+    padding: 30px;
+    width:700px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    justify-content: center
+}
+.icon{
+	margin-right: 15px;
+}

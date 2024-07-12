@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Welcome!</title>
+<link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css}" rel="stylesheet" />
+<link th:href="@{styles/style.css}" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+	<nav>
+	<img th:src="@{images/white_logo.png}" class='logo'><span class='logoName'>CuddleCoin</span>
+	</nav>
+</header>
+<div class='intro'>
+<div class='container' >
+<h1>Save your money</h1>
+<img th:src="@{images/cats.png}" class='cats'>
+<h2 class='subtitle'>and allocate you budget</h2>
+<a href="/transaction"><button >Start now!</button></a>
+</div>
+</div>
+</body>
+</html>
