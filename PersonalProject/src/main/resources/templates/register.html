@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+<link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css}" rel="stylesheet" />
+<link th:href="@{css/style.css}" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Register</title>
+</head>
+<body>
+<header>
+	<nav>
+	<img th:src="@{images/white_logo.png}" class='logo'><span class='logoName'>CuddleCoin</span>
+	</nav>
+</header>
+	<div class='container' >
+	<div class='form' >
+	<h1>Register Here!</h1>
+	<img th:src="@{images/profile.png}" class='profile'>
+	<div id="error" class="error"></div>
+	<form name="form" action="#" th:action="@{/register}" method="post"
+		onsubmit="return verify()">
+		Email: <input type="email" name="username" /><br> Password: <input
+			type="password" name="password" /><br> Verify Password: <input
+			type="password" name="verifyPassword" /><br> <input
+			type="submit" value="Register">
+	</form>
+	</div>
+	</div>
+</body>
+</html>

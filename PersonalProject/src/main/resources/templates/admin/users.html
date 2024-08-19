@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link
+	th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css}"
+	rel="stylesheet" />
+<link th:href="@{../css/style.css}" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+	rel="stylesheet">
+<title>Manage Users</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<img th:src="@{../images/white_logo.png}" class='logo'><span
+				class='logoName'>CuddleCoin</span>
+		</nav>
+		<div class="navbar">
+			<ul>
+				<li><a href="/secure/transaction">Home</a></li>
+				<li><a href="/secure/topCategories">Top 5 Categories</a></li>
+				<li><a href="/secure/goal">Financial Goals</a></li>
+				<li><a href="/admin/users">Users</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class='container'>
+		<h1>User accounts</h1>
+		<table>
+			<tr>
+				<th>User email</th>
+				<th></th>
+			</tr>
+			<tbody th:if="${ usList!= null and !usList.isEmpty()}">
+				<tr th:each="user: ${usList}">
+					<td th:text="${user.email}"></td>
+					<td><a th:href="@{/admin/user/deleteUsById/}+${user.userId}">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</body>
+</html>

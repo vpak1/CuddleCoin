@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="UTF-8">
+<link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css}" rel="stylesheet" />
+<link th:href="@{../css/style.css}" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+<title>Error</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<img th:src="@{../images/white_logo.png}" class='logo'><span
+				class='logoName'>CuddleCoin</span>
+		</nav>
+		<div class="navbar">
+			<ul>
+				<li><a href="/secure/transaction">Home</a></li>
+				<li><a href="/secure/topCategories">Top 5 Categories</a></li>
+				<li><a href="/admin/users">Users</a></li>
+			</ul>
+		</div>
+	</header>
+<div class='container'>
+	<h1>Permission denied</h1>
+	<p>
+		<a th:href="@{/secure/transaction}">Back to home page</a>
+	</p>
+	<img th:src="@{../images/idk.png}" class='cats'>
+	<form method="post" th:action="@{/logout}">
+		<input type="submit" value="Logout" />
+	</form>
+</div>
+</body>
+</html>
