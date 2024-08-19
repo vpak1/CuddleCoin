@@ -55,7 +55,7 @@ header .navbar a:hover{
 }
 
 .container{
-	margin-top:100px;
+	margin-top:80px;
 	padding: 2rem 9%;
 	display: flex;
 	justify-content: center;
@@ -68,6 +68,10 @@ header .navbar a:hover{
 	padding: 2rem;
 	padding-right: 20%;
 	padding-left: 20%;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 .intro{
 	background:url(../images/background.png) no-repeat;
@@ -88,6 +92,10 @@ h1, h2{
 }
 .cats{
 	height:400px;
+}
+.profile{
+	height: 100px;
+	margin: 10%;
 }
 button{
 	background-color: black;
@@ -128,10 +136,10 @@ table a:hover {
 	text-decoration: underline;
 }
 
-input[type="text"], [type=date], select {
+input[type="text"], [type=date],[type=email],[type=password], select {
 	background-color: #E0E0E0;
 	padding: 10px;
-	margin: 10px 0;
+	margin: 10% 0;
 	border-radius: 4px;
 	width: 100%;
 	font-weight: 300;
@@ -165,4 +173,7 @@ input[type="submit"] {
 }
 .icon{
 	margin-right: 15px;
+}
+.notif{
+	text-align: center;
 }

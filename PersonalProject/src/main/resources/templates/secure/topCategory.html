@@ -2,23 +2,25 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Top Categories</title>
 <link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css}" rel="stylesheet" />
-<link th:href="@{styles/style.css}" rel="stylesheet" />
+<link th:href="@{../css/style.css}" rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" \\>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
 </head>
 <body>
 <header>
 	<nav>
-		<img th:src="@{images/white_logo.png}" class='logo'><span class='logoName'>CuddleCoin</span>
+		<img th:src="@{../images/white_logo.png}" class='logo'><span class='logoName'>CuddleCoin</span>
 	</nav>
 	<div class="navbar">
 		<ul>
-        	<li><a href="/transaction">Home</a></li>
-        	<li><a href="/topCategories">Top 5 Categories</a></li>
+        	<li><a href="/secure/transaction">Home</a></li>
+        	<li><a href="/secure/topCategories">Top 5 Categories</a></li>
+        	<li><a href="/secure/goal">Financial Goals</a></li>
+        	<li><a href="/admin/users">Users</a></li>
     	</ul>
     </div>
 </header>
@@ -39,7 +41,7 @@
  		<span th:text="${category}"></span>
  	</li>
  </ul>
- <a href="/transaction"><button>Back</button></a>
+ <a href="/secure/transaction"><button>Back</button></a>
  </div>
 </body>
 </html>

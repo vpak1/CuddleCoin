@@ -18,3 +18,6 @@ public class Transaction {
 	private final String[] TYPES = {"Expense", "Income"};
 	private final String[] CATEGORIES = {"Groceries", "Shopping", "Entertainment", "Rent", "Takeout", "Salary"};
 }
+
+
+
